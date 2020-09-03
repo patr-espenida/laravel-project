@@ -79,7 +79,7 @@ class FilmController extends Controller
         $data = $request->all();
         $rules = [
             'title' => 'required|min:3|max:50',
-            'story' => 'required|string|max:300',
+            'story' => 'required|string|max:1000',
             'release_date'=> 'required|date',
             'duration'=> 'required|date_format:G:i:s',
             'producer_id' => 'required|array',
@@ -184,7 +184,7 @@ class FilmController extends Controller
         $data = $request->all();
         $rules = [
             'title' => 'required|min:3|max:50',
-            'story' => 'required|string|max:300',
+            'story' => 'required|string|max:1000',
             'release_date'=> 'required|date',
             'duration'=> 'required|date_format:G:i:s',
             'producer_id.required'=> 'Select Film Producer.',
